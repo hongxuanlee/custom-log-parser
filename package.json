@@ -1,0 +1,31 @@
+{
+  "name": "custom-log-parser",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/units/**/*",
+    "cov": "istanbul cover npm test",
+    "t": "istanbul cover ./node_modules/mocha/bin/_mocha test/units/**/* --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hongxuanlee/custom-log-parser.git"
+  },
+  "author": "hongxuanlee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hongxuanlee/custom-log-parser/issues"
+  },
+  "homepage": "https://github.com/hongxuanlee/custom-log-parser/#readme",
+  "devDependencies": {
+    "chai": "*",
+    "coveralls": "*",
+    "istanbul": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*"
+  },
+  "dependencies": {
+    "mz": "^2.6.0"
+  }
+}
