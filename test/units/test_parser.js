@@ -7,7 +7,7 @@ const info = require('../fixtures/tcp_info.js');
 
 describe('log parser', () => {
   it('should parse tcp log', (done) => {
-    let dir = path.join(__dirname, '../fixtures/tcp_flow.log');
+    let dir = path.join(__dirname, '../fixtures/tcp_flow');
     parse(dir, temp).then(data => {
       assert.deepEqual(data, info);
       done();
